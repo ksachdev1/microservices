@@ -1,206 +1,52 @@
-﻿# Welcome to StackEdit!
-
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. If you have finished with me, you can just create new files by opening the **file explorer** on the left corner of the navigation bar.
-
-
-# Files
-
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
-
-## Create files and folders
-
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
-
-## Switch to another file
-
-All your files are listed in the file explorer. You can switch from one to another by clicking a file in the list.
-
-## Rename a file
-
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
-
-## Delete a file
-
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
-
-
-# Synchronization
-
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
-
-There are two types of synchronization and they can complement each other:
-
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
-
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
-
-## Open a file
-
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
-
-## Save a file
-
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
-
-## Synchronize a file
-
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
-
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
-
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
-## Manage file synchronization
-
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
-
-
-# Publication
-
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
-
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
-
-## Publish a File
-
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
-
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
-
-## Update a publication
-
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
-
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
-
-
-
-
-
-
-# External Aggregation for large files
-
-
-
-#### Assumptions/Caveats
-- The code assumes a directory `/tmp/output` exists as it creates temp files for merge operation there. Hence this directory must be created before the code can be executed.
-- I chose to have that location as pre-existing. The temp files get created there and then the files get deleted once the JVM exits. The dir continues to exist.
-
-#### Steps to compile the code
-   - Move to the sub-dir `kanwalaggr`
-   - Compile: `javac -cp . testme/ExternalAggregationSol.java`
-   - Above step will create the class files needed. 
-   - There is a python script that can be used to generate mock data. It can be tweaked to generate more than a million records, but right now it generates a million records randomly with key range from 1-1000. The way to run it is `python generate_data.py`. The output of this can be used as a sample data
-
-#### How to run the code
-- `java testme.ExternalAggregationSol <ram-size-in-bytes> <input-file>`
-
-   
-
-
-##### The following steps show an example all the way from generating an input file to compiling and then running:
-```
-1. mkdir /tmp/output
-2. python generate_data.py > /tmp/inputfile
+---
+
+
+---
+
+<h1 id="external-aggregation-for-large-files">External Aggregation for large files</h1>
+<h4 id="assumptionscaveats">Assumptions/Caveats</h4>
+<ul>
+<li>The code assumes a directory <code>/tmp/output</code> exists as it creates temp files for merge operation there. Hence this directory must be created before the code can be executed.</li>
+<li>I chose to have that location as pre-existing. The temp files get created there and then the files get deleted once the JVM exits. The dir continues to exist.</li>
+</ul>
+<h4 id="steps-to-compile-the-code">Steps to compile the code</h4>
+<ul>
+<li>Move to the sub-dir <code>kanwalaggr</code></li>
+<li>Compile: <code>javac -cp . testme/ExternalAggregationSol.java</code></li>
+<li>Above step will create the class files needed.</li>
+<li>There is a python script that can be used to generate mock data. It can be tweaked to generate more than a million records, but right now it generates a million records randomly with key range from 1-1000. The way to run it is <code>python generate_data.py</code>. The output of this can be used as a sample data</li>
+</ul>
+<h4 id="how-to-run-the-code">How to run the code</h4>
+<ul>
+<li><code>java testme.ExternalAggregationSol &lt;ram-size-in-bytes&gt; &lt;input-file&gt;</code></li>
+</ul>
+<h5 id="the-following-steps-show-an-example-all-the-way-from-generating-an-input-file-to-compiling-and-then-running">The following steps show an example all the way from generating an input file to compiling and then running:</h5>
+<pre><code>1. mkdir /tmp/output
+2. python generate_data.py &gt; /tmp/inputfile
 3. javac -cp . testme/ExternalAggregationSol.java
 4. java testme.ExternalAggregationSol 8192 /tmp/inputfile
-```
+</code></pre>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-Xobdv8mtH2fmiScX" height="100%" viewBox="0 0 939.421875 1529.3843688964844" style="max-width:939.421875px;"><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M349.15234375,66L349.15234375,91L349.15234375,116" marker-end="url(#arrowhead67843)" style="fill:none"></path><defs><marker id="arrowhead67843" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M349.15234375,162L349.15234375,187L349.15234375,212" marker-end="url(#arrowhead67844)" style="fill:none"></path><defs><marker id="arrowhead67844" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M349.15234375,258L349.15234375,283L349.65234375,308.5" marker-end="url(#arrowhead67845)" style="fill:none"></path><defs><marker id="arrowhead67845" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M307.6045740428535,420.2022302928535L210.4609375,499.75L210.4609375,560.75L210.4609375,621.75L210.4609375,682.75L210.4609375,743.75L210.4609375,804.75L210.4609375,852.75L210.4609375,1026.1687469482422L210.4609375,1212.5874938964844L210.4609375,1250.5874938964844" marker-end="url(#arrowhead67846)" style="fill:none"></path><defs><marker id="arrowhead67846" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M210.4609375,1296.5874938964844L210.4609375,1321.5874938964844L477.56640625,1361.765628574723" marker-end="url(#arrowhead67847)" style="fill:none"></path><defs><marker id="arrowhead67847" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M529.56640625,1392.5874938964844L529.56640625,1417.5874938964844L529.56640625,1442.5874938964844" marker-end="url(#arrowhead67848)" style="fill:none"></path><defs><marker id="arrowhead67848" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M402.3423570687843,409.5599866812157L599.421875,499.75L599.421875,537.75" marker-end="url(#arrowhead67849)" style="fill:none"></path><defs><marker id="arrowhead67849" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M517.4608094262295,583.75L382.046875,621.75L382.046875,659.75" marker-end="url(#arrowhead67850)" style="fill:none"></path><defs><marker id="arrowhead67850" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M559.53125,583.75L493.625,621.75L493.625,659.75" marker-end="url(#arrowhead67851)" style="fill:none"></path><defs><marker id="arrowhead67851" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M620.4570952868852,583.75L655.2109375,621.75L655.2109375,659.75" marker-end="url(#arrowhead67852)" style="fill:none"></path><defs><marker id="arrowhead67852" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M662.5275358606557,583.75L766.7890625,621.75L766.7890625,659.75" marker-end="url(#arrowhead67853)" style="fill:none"></path><defs><marker id="arrowhead67853" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M382.046875,705.75L382.046875,743.75L517.4608094262295,781.75" marker-end="url(#arrowhead67854)" style="fill:none"></path><defs><marker id="arrowhead67854" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M493.625,705.75L493.625,743.75L559.53125,781.75" marker-end="url(#arrowhead67855)" style="fill:none"></path><defs><marker id="arrowhead67855" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M655.2109375,705.75L655.2109375,743.75L620.4570952868852,781.75" marker-end="url(#arrowhead67856)" style="fill:none"></path><defs><marker id="arrowhead67856" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M766.7890625,705.75L766.7890625,743.75L662.5275358606557,781.75" marker-end="url(#arrowhead67857)" style="fill:none"></path><defs><marker id="arrowhead67857" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M550.1773918469747,827.75L496.6507797241211,852.75L497.15077972412104,878.2500030517581" marker-end="url(#arrowhead67858)" style="fill:none"></path><defs><marker id="arrowhead67858" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M497.15077972412104,1175.087496948242L496.6507797241211,1212.5874938964844L560.6721177648326,1250.5874938964844" marker-end="url(#arrowhead67859)" style="fill:none"></path><defs><marker id="arrowhead67859" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M640.4348104508197,1250.5874938964844L708.1953125,1212.5874938964844L708.1953125,1026.1687469482422L708.1953125,852.75L651.54248046875,827.75" marker-end="url(#arrowhead67860)" style="fill:none"></path><defs><marker id="arrowhead67860" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M594.1839652091136,1078.0543175667656L848.671875,1212.5874938964844L848.671875,1250.5874938964844" marker-end="url(#arrowhead67861)" style="fill:none"></path><defs><marker id="arrowhead67861" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M848.671875,1296.5874938964844L848.671875,1321.5874938964844L581.56640625,1361.765628574723" marker-end="url(#arrowhead67862)" style="fill:none"></path><defs><marker id="arrowhead67862" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(210.4609375,743.75)"><g transform="translate(-11.703125,-13)" class="label"><foreignObject width="23.40625" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">yes</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(599.421875,499.75)"><g transform="translate(-9,-13)" class="label"><foreignObject width="18" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">no</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(382.046875,621.75)"><g transform="translate(-45.7890625,-13)" class="label"><foreignObject width="91.578125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">sorted chunk</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(493.625,621.75)"><g transform="translate(-45.7890625,-13)" class="label"><foreignObject width="91.578125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">sorted chunk</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(655.2109375,621.75)"><g transform="translate(-45.7890625,-13)" class="label"><foreignObject width="91.578125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">sorted chunk</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(766.7890625,621.75)"><g transform="translate(-45.7890625,-13)" class="label"><foreignObject width="91.578125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">sorted chunk</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(496.6507797241211,1212.5874938964844)"><g transform="translate(-10.5234375,-13)" class="label"><foreignObject width="21.046875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">No</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(708.1953125,1026.1687469482422)"><g transform="translate(-21.2734375,-13)" class="label"><foreignObject width="42.546875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">chunk</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform="translate(848.671875,1212.5874938964844)"><g transform="translate(-11.703125,-13)" class="label"><foreignObject width="23.40625" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">yes</span></div></foreignObject></g></g><g class="edgeLabel" style="opacity: 1;" transform=""><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" style="opacity: 1;" id="A" transform="translate(349.15234375,43)"><rect rx="0" ry="0" x="-41.203125" y="-23" width="82.40625" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-31.203125,-13)"><foreignObject width="62.40625" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Input file</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="B" transform="translate(349.15234375,139)"><rect rx="0" ry="0" x="-120.5390625" y="-23" width="241.078125" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-110.5390625,-13)"><foreignObject width="221.078125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">ExternalAggregationSol module</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="I" transform="translate(349.15234375,235)"><rect rx="0" ry="0" x="-80.125" y="-23" width="160.25" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-70.125,-13)"><foreignObject width="140.25" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">In mem sort module</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="C" transform="translate(349.15234375,384.875)"><polygon points="76.875,0 153.75,-76.875 76.875,-153.75 0,-76.875" rx="5" ry="5" transform="translate(-76.875,76.875)"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-63.09375,-13)"><foreignObject width="126.1875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">file fits in memory</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="D" transform="translate(210.4609375,1273.5874938964844)"><rect rx="0" ry="0" x="-190.4609375" y="-23" width="380.921875" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-180.4609375,-13)"><foreignObject width="360.921875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Simply read file into hashmap and merge the results</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="F" transform="translate(529.56640625,1369.5874938964844)"><rect rx="0" ry="0" x="-52" y="-23" width="104" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-42,-13)"><foreignObject width="84" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Print results</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="G" transform="translate(529.56640625,1465.9859313964844)"><circle x="-23.3984375" y="-23" r="23.3984375"></circle><g class="label" transform="translate(0,0)"><g transform="translate(-13.3984375,-13)"><foreignObject width="26.796875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Exit</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="E" transform="translate(599.421875,560.75)"><rect rx="0" ry="0" x="-161.796875" y="-23" width="323.59375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-151.796875,-13)"><foreignObject width="303.59375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">create temp chunks and sort chunks to disk</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="ch1" transform="translate(382.046875,682.75)"><rect rx="0" ry="0" x="-22.9296875" y="-23" width="45.859375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-12.9296875,-13)"><foreignObject width="25.859375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">ch1</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="ch2" transform="translate(493.625,682.75)"><rect rx="0" ry="0" x="-22.9296875" y="-23" width="45.859375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-12.9296875,-13)"><foreignObject width="25.859375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">ch2</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="ch3" transform="translate(655.2109375,682.75)"><rect rx="0" ry="0" x="-22.9296875" y="-23" width="45.859375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-12.9296875,-13)"><foreignObject width="25.859375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">ch3</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="ch4" transform="translate(766.7890625,682.75)"><rect rx="0" ry="0" x="-22.9296875" y="-23" width="45.859375" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-12.9296875,-13)"><foreignObject width="25.859375" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">ch4</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="M" transform="translate(599.421875,804.75)"><rect rx="0" ry="0" x="-91.8515625" y="-23" width="183.703125" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-81.8515625,-13)"><foreignObject width="163.703125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">External Merge module</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="InMemChunks" transform="translate(496.6507797241211,1026.1687469482422)"><polygon points="148.41875000000002,0 296.83750000000003,-148.41875000000002 148.41875000000002,-296.83750000000003 0,-148.41875000000002" rx="5" ry="5" transform="translate(-148.41875000000002,148.41875000000002)"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-152.5234375,-13)"><foreignObject width="305.046875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">One record from each chunk fits in memory</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="IM" transform="translate(599.421875,1273.5874938964844)"><rect rx="0" ry="0" x="-148.5" y="-23" width="297" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-138.5,-13)"><foreignObject width="277" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Merge enough cunks that fit in memory</div></foreignObject></g></g></g><g class="node" style="opacity: 1;" id="FM" transform="translate(848.671875,1273.5874938964844)"><rect rx="0" ry="0" x="-50.75" y="-23" width="101.5" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-40.75,-13)"><foreignObject width="81.5" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Final merge</div></foreignObject></g></g></g></g></g></g></svg></div>
+<h4 id="design-overview">Design overview</h4>
+<p>As can be seen from the flowchart above the flow is divided into using two different modules</p>
+<ol>
+<li>In memory sort module</li>
+<li>External Merge Module</li>
+</ol>
+<h5 id="in-memory-sort-module">In memory sort module</h5>
+<ul>
+<li>The in memory sort module is invoked by the main method. The module first checks if the file size on disk is less than the provided RAM size on the cli and if it is, it simply invokes the sort module that is directly lifted from the sample solution i.e. creates a hashmap and does the processing in linear time.</li>
+<li>If the in memory module cannot calculates that it cannot read the whole file, it starts doing the file read in chunks and then creates chunks at <code>/tmp/output.</code> These chunks just contain enough records that can all fit in memory.</li>
+<li>At the end of this in memory sort(uses Java lib to do this sort), the individual chunks are sorted by key. This groups all the keys same keys together in each file. The same keys are not merged together yet.</li>
+</ul>
+<h5 id="external-sort-module">External sort module</h5>
+<ul>
+<li>Once all the sorted chunks are on disk, the external merge module is invoked.</li>
+<li>The external merge module first checks to see if a record from each file can be brought in memory or not. If a record from each file can be brought in memory, it creates a min heap and starts pulling out the keys.</li>
+<li>As long as the keys are same, it keeps counting how may occurrences of a key have been seen and also retains the alphabetically largest value in a variable.</li>
+<li>Once the heap gives a different key, it means the previous key is totally processed and can be written to disk with the frequency of its occurrence and the value(the highest one alphabetically)</li>
+<li>The slight complexity occurs if not one record from each chunk fits in memory. In that case, one  record each from only the first <code>k</code> chunks are brought into memory and merged. This way let us say if total chunks were <code>C</code>, now we have <code>C-k</code> chunks from original chunks and got one more new chunks after merging the <code>k</code> chunks. This merge operation if <code>C&gt;k</code> is the case, happens Ln(N)/Ln(k) times. Each heap operation is still <code>klogk</code></li>
+<li>If RAM size is <code>R</code> bytes and size of each chunk is <code>S=140 bytes</code>, the number of chunks that can be possible to fit are <code>k=R/S</code>(floor value). Hence the merge happens in batches of <code>k</code></li>
+<li>The overall complexity whether a record from all <code>k</code> chunks fits or not is still <code>NLogN</code> where <code>N is the total rows in the original file</code>. Assuming fixed size of each row as <code>S=140</code>, the total file size will always be less than or equal to <code>NS</code></li>
+</ul>
 
-
-
-
-
-```mermaid
-graph TB
-A[Input file] --> B[ExternalAggregationSol module]
-B --> I[In mem sort module]
-I --> C{file fits in memory}
-C -- yes --> D[Simply read file into hashmap and merge the results ]
-D --> F[Print results]
-F --> G((Exit))
-C -- no --> E[create temp chunks and sort chunks to disk]
-E-- sorted chunk -->ch1
-E--sorted chunk-->ch2
-E--sorted chunk-->ch3
-E--sorted chunk-->ch4
-ch1-->M[External Merge module]
-ch2-->M
-ch3-->M
-ch4-->M
-M-->InMemChunks{ One record from each chunk fits in memory }
-InMemChunks --No --> IM[Merge enough cunks that fit in memory] 
-IM--chunk-->M
-InMemChunks --yes -->FM[Final merge]
-
-end
-```
-![Flowchart](flowchart.png)
